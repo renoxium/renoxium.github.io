@@ -61,7 +61,7 @@ export default function Nav() {
   const stage = useStage();
   const ctaRef = useMagnetic(0.3);
 
-  const NAV_LINKS = ['craft', 'process', 'faq', 'contact'];
+  const NAV_LINKS = ['craft', 'process', 'edge', 'faq', 'contact'];
 
   const handleNav = (page) => (e) => {
     e.preventDefault();
@@ -71,17 +71,25 @@ export default function Nav() {
 
   const isHidden = (page) => stage.currentPage === page;
   const transitioning = stage.phase !== 'idle';
+  const isHome = stage.currentPage === 'home';
 
   return (
     <nav style={navStyles.bar}>
       <div className="wrap" style={navStyles.inner}>
         <button
           onClick={handleNav('home')}
-          style={{ ...navStyles.brand, opacity: isHidden('home') ? 0 : 1, pointerEvents: isHidden('home') ? 'none' : 'auto' }}
-          className="brand-hover"
+          aria-label={isHome ? 'You are on the home page' : 'Back to home'}
+          style={{
+            ...navStyles.brand,
+            opacity: transitioning ? 0 : 1,
+            pointerEvents: transitioning ? 'none' : 'auto',
+          }}
+          className={`brand-hover${isHome ? ' is-home' : ''}`}
+          data-current={isHome ? 'home' : ''}
         >
           <span className="renox-mark-wrap"><RenoxiumMark /></span>
           <span style={navStyles.word} className="renox-word">Renoxium</span>
+          <span className="brand-home-dot" aria-hidden="true"></span>
         </button>
         <div style={navStyles.links} className="nav-links">
           {NAV_LINKS.map((page) => (
@@ -129,7 +137,19 @@ export default function Nav() {
           animation: pulse 2.4s ease-in-out infinite;
         }
         .nav-cta:hover .nav-dot { background: #0E0F0D; }
-        .brand-hover { background: none; border: none; padding: 0; }
+        .brand-hover { background: none; border: none; padding: 0; position: relative; }
+        .brand-home-dot {
+          position: absolute;
+          right: -10px; top: 4px;
+          width: 4px; height: 4px;
+          border-radius: 999px;
+          background: var(--amber);
+          opacity: 0;
+          transition: opacity 240ms ease;
+        }
+        .brand-hover.is-home .brand-home-dot { opacity: 1; animation: pulse 2.4s ease-in-out infinite; }
+        .brand-hover.is-home { cursor: default; }
+        .brand-hover.is-home .renox-word { color: var(--ink-3); }
         @media (max-width: 720px) {
           .nav-links { gap: 12px !important; }
           .nav-cta { padding: 9px 10px !important; font-size: 10px !important; gap: 0 !important; }

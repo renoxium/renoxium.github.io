@@ -33,7 +33,6 @@ const craftStyles = {
     alignItems: 'center',
     gap: 32,
     padding: '32px 0',
-    borderBottom: '1px solid var(--rule)',
     cursor: 'none',
     overflow: 'hidden',
   },
@@ -89,12 +88,54 @@ const craftStyles = {
 };
 
 const services = [
-  { n: '01', title: 'SaaS platforms',     meta: 'B2B · multi-tenant',          scene: 'saas' },
-  { n: '02', title: 'AI applications',    meta: 'LLM · agents · RAG',          scene: 'ai' },
-  { n: '03', title: 'Web applications',   meta: 'React · Next · TS',           scene: 'web' },
-  { n: '04', title: 'Mobile apps',        meta: 'iOS · Android · RN',          scene: 'mobile' },
-  { n: '05', title: 'Rapid prototyping',  meta: 'Idea to clickable in 7 days', scene: 'proto' },
-  { n: '06', title: 'A to Z delivery',    meta: 'Discovery · build · scale',   scene: 'az' },
+  {
+    n: '01',
+    title: 'SaaS platforms',
+    meta: 'B2B · multi-tenant',
+    scene: 'saas',
+    body: 'A SaaS platform is software your customers log into and pay for monthly — think Notion, Stripe, or Slack. We build the whole thing: the login, the dashboard each tenant sees, the billing that charges their card on the right day, the admin console for your team. Your users get a working product; your finance team gets predictable recurring revenue.',
+    bullets: ['Login, roles, multi-tenant data isolation', 'Subscription billing + usage metering', 'Admin console for your team', 'Audit logs and compliance hooks'],
+  },
+  {
+    n: '02',
+    title: 'AI applications',
+    meta: 'LLM · agents · RAG',
+    scene: 'ai',
+    body: "Software that uses AI to do the work — answering questions about your documents, writing first drafts, automating decisions a human used to make manually. We pick the right model for the job (sometimes that's GPT, sometimes a smaller open one), connect it to your data, and wrap it in a UI your users actually understand. No magic — just thoughtful plumbing.",
+    bullets: ['Chat over your docs (RAG)', 'Agents that take real actions', 'Eval harness so you know it works', 'Cost & latency tuning'],
+  },
+  {
+    n: '03',
+    title: 'Web applications',
+    meta: 'React · Next · TS',
+    scene: 'web',
+    body: 'A website that does something — not just a brochure. Bookings, dashboards, configurators, internal tools, marketplaces. We build it fast in modern React, deploy it to a CDN so it loads instantly anywhere in the world, and wire up the backend pieces (database, auth, payments, email) so it actually works on Monday morning.',
+    bullets: ['Marketing sites with a CMS', 'Internal tools and dashboards', 'Marketplaces & two-sided platforms', 'High-traffic landing pages'],
+  },
+  {
+    n: '04',
+    title: 'Mobile apps',
+    meta: 'iOS · Android · RN',
+    scene: 'mobile',
+    body: 'Apps your users install from the App Store and Google Play. We build native (Swift/Kotlin) when the experience demands it — like camera-heavy or game-feel apps — and React Native when one team and one codebase makes more sense. We also handle the stuff people forget: store submissions, push notifications, crash reporting, OTA updates.',
+    bullets: ['iOS & Android in one codebase', 'Push notifications & deep links', 'Offline-first sync', 'Store submission + review handling'],
+  },
+  {
+    n: '05',
+    title: 'Rapid prototyping',
+    meta: 'Idea to clickable in 7 days',
+    scene: 'proto',
+    body: "You have an idea. We turn it into something you can click, demo to investors, hand to users for feedback — in seven days, fixed price. It is not a Figma file pretending to be a product; it is a real working app on a real URL. If we proceed to a v1, the prototype code rolls forward; if we don't, you keep what we built and the lessons.",
+    bullets: ['Day 1–2: scoping + flow design', 'Day 3–6: build', 'Day 7: live URL + screen-recorded walkthrough', 'Fixed price, no surprises'],
+  },
+  {
+    n: '06',
+    title: 'A to Z delivery',
+    meta: 'Discovery · build · scale',
+    scene: 'az',
+    body: "Sometimes you don't want to manage three vendors. We can be your everything-team: research and discovery, brand and design, build and launch, monitoring and on-call. One contract, one PM, one Slack channel. We hand off cleanly when you're ready to bring it in-house — or stay on as your platform team for as long as that works.",
+    bullets: ['Discovery & user research', 'Brand, design, content', 'Engineering & QA', 'Hosting, monitoring, on-call'],
+  },
 ];
 
 function CraftScene({ name }) {
@@ -205,6 +246,7 @@ function CraftScene({ name }) {
 
 export default function Craft() {
   const [active, setActive] = useState(null);
+  const [expanded, setExpanded] = useState(null);
 
   return (
     <section id="craft" data-screen-label="Craft" style={craftStyles.section}>
@@ -218,83 +260,275 @@ export default function Craft() {
           </div>
           <p style={craftStyles.blurb}>
             We do not specialize in a stack. We specialize in shipping.
-            Hover any line below to see how it shows up in the work.
+            Hover any line for a preview, click the chevron for the full story.
           </p>
         </div>
 
         <div style={craftStyles.list}>
-          {services.map((s, i) => (
-            <div
-              key={s.n}
-              className={`craft-row${active === i ? ' is-active' : ''}`}
-              style={craftStyles.row}
-              onMouseEnter={() => setActive(i)}
-              onMouseLeave={() => setActive(null)}
-              onClick={() => setActive(active === i ? null : i)}
-            >
-              <div className="craft-fill" style={craftStyles.rowFill}></div>
+          {services.map((s, i) => {
+            const isExpanded = expanded === i;
+            return (
               <div
-                className="craft-scene"
-                style={{
-                  ...craftStyles.rowScene,
-                  opacity: active === i ? 0.85 : 0,
-                  transform: active === i ? 'translateY(-50%) scale(1)' : 'translateY(-50%) scale(0.85)',
-                }}
-                aria-hidden="true"
+                key={s.n}
+                className={`craft-row${active === i ? ' is-active' : ''}${isExpanded ? ' is-expanded' : ''}`}
+                onMouseEnter={() => setActive(i)}
+                onMouseLeave={() => setActive(null)}
               >
-                <CraftScene name={s.scene} />
-              </div>
-              <div style={craftStyles.rowNum}>{s.n}</div>
-              <div
-                className="craft-title"
-                style={{
-                  ...craftStyles.rowTitle,
-                  transform: active === i ? 'translateX(28px)' : 'translateX(0)',
-                  fontStyle: active === i ? 'italic' : 'normal',
-                  color: active === i ? 'var(--amber)' : 'var(--ink)',
-                  fontVariationSettings: active === i
-                    ? '"opsz" 144, "SOFT" 100, "wght" 360'
-                    : '"opsz" 144, "SOFT" 30, "wght" 360',
-                }}
-              >
-                {s.title}
-              </div>
-              <div
-                className="craft-meta"
-                style={{
-                  ...craftStyles.rowMeta,
-                  color: active === i ? 'var(--amber)' : 'var(--ink-4)',
-                }}
-              >
-                <span>{s.meta}</span>
-                <svg
-                  style={{
-                    ...craftStyles.rowArrow,
-                    transform: active === i ? 'translateX(8px) rotate(-45deg)' : 'translateX(0) rotate(0)',
+                <div
+                  className="craft-row-head"
+                  style={craftStyles.row}
+                  role="button"
+                  tabIndex={0}
+                  aria-expanded={isExpanded}
+                  aria-label={`${isExpanded ? 'Collapse' : 'Expand'} details for ${s.title}`}
+                  onClick={() => setExpanded(isExpanded ? null : i)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setExpanded(isExpanded ? null : i);
+                    }
                   }}
-                  viewBox="0 0 18 18" fill="none"
                 >
-                  <path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                  <div className="craft-fill" style={craftStyles.rowFill}></div>
+                  <div
+                    className="craft-scene"
+                    style={{
+                      ...craftStyles.rowScene,
+                      opacity: active === i && !isExpanded ? 0.85 : 0,
+                      transform: active === i && !isExpanded ? 'translateY(-50%) scale(1)' : 'translateY(-50%) scale(0.85)',
+                    }}
+                    aria-hidden="true"
+                  >
+                    <CraftScene name={s.scene} />
+                  </div>
+                  <div style={craftStyles.rowNum}>{s.n}</div>
+                  <div
+                    className="craft-title"
+                    style={{
+                      ...craftStyles.rowTitle,
+                      transform: active === i ? 'translateX(28px)' : 'translateX(0)',
+                      fontStyle: active === i ? 'italic' : 'normal',
+                      color: active === i ? 'var(--amber)' : 'var(--ink)',
+                      fontVariationSettings: active === i
+                        ? '"opsz" 144, "SOFT" 100, "wght" 360'
+                        : '"opsz" 144, "SOFT" 30, "wght" 360',
+                    }}
+                  >
+                    {s.title}
+                  </div>
+                  <div
+                    className="craft-meta"
+                    style={{
+                      ...craftStyles.rowMeta,
+                      color: active === i ? 'var(--amber)' : 'var(--ink-4)',
+                    }}
+                  >
+                    <span className="craft-meta-text">{s.meta}</span>
+                    <button
+                      type="button"
+                      className="craft-chevron"
+                      aria-expanded={isExpanded}
+                      aria-label={isExpanded ? `Collapse ${s.title}` : `Expand ${s.title}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setExpanded(isExpanded ? null : i);
+                      }}
+                    >
+                      <svg viewBox="0 0 18 18" fill="none" width="18" height="18">
+                        <path d="M4 7l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  className="craft-body"
+                  style={{
+                    maxHeight: isExpanded ? 600 : 0,
+                    opacity: isExpanded ? 1 : 0,
+                  }}
+                  aria-hidden={!isExpanded}
+                >
+                  <div className="craft-body-inner">
+                    <p className="craft-body-text">{s.body}</p>
+                    {s.bullets && (
+                      <ul className="craft-body-bullets">
+                        {s.bullets.map((b) => <li key={b}>{b}</li>)}
+                      </ul>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
       <style>{`
+        .craft-row { border-bottom: 1px solid var(--rule); }
         .craft-row:hover .craft-fill { transform: scaleX(1); }
+        .craft-row.is-expanded .craft-fill { transform: scaleX(1); }
+        .craft-row.is-expanded .craft-row-head .craft-title {
+          color: var(--amber) !important;
+          font-style: italic !important;
+        }
         .craft-scene { transition: opacity 420ms cubic-bezier(0.2,0.8,0.2,1), transform 460ms cubic-bezier(0.2,0.8,0.2,1); }
+
+        .craft-chevron {
+          appearance: none;
+          background: transparent;
+          border: 1px solid var(--rule-strong);
+          color: var(--ink-3);
+          width: 32px; height: 32px;
+          border-radius: 999px;
+          display: inline-flex;
+          align-items: center; justify-content: center;
+          cursor: pointer;
+          transition: border-color 220ms, color 220ms, background 220ms, transform 320ms cubic-bezier(0.2,0.8,0.2,1);
+          margin-left: 14px;
+          flex-shrink: 0;
+          position: relative;
+          z-index: 2;
+        }
+        .craft-chevron:hover { color: var(--amber); border-color: var(--amber); }
+        .craft-chevron svg { transition: transform 320ms cubic-bezier(0.2,0.8,0.2,1); }
+        .craft-row.is-expanded .craft-chevron {
+          color: var(--amber);
+          border-color: var(--amber);
+          background: var(--amber-soft);
+        }
+        .craft-row.is-expanded .craft-chevron svg { transform: rotate(180deg); }
+
+        .craft-row-head { user-select: none; }
+        .craft-row-head:focus-visible {
+          outline: 1px dashed var(--amber);
+          outline-offset: 4px;
+        }
+
+        .craft-body {
+          overflow: hidden;
+          transition: max-height 540ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 320ms ease;
+          position: relative;
+          z-index: 1;
+        }
+        .craft-body-inner {
+          padding: 8px 0 36px 112px;
+          display: grid;
+          grid-template-columns: 1.4fr 1fr;
+          gap: 48px;
+          max-width: 100%;
+          position: relative;
+        }
+
+        /* Vertical accent line that draws down on expand */
+        .craft-body-inner::before {
+          content: '';
+          position: absolute;
+          left: 28px;
+          top: 0;
+          bottom: 18px;
+          width: 1px;
+          background: linear-gradient(to bottom, var(--amber) 0%, transparent 100%);
+          transform-origin: top;
+          transform: scaleY(0);
+          opacity: 0;
+        }
+        .craft-row.is-expanded .craft-body-inner::before {
+          animation: craftLine 540ms cubic-bezier(0.2, 0.8, 0.2, 1) 80ms forwards;
+        }
+
+        .craft-body-text {
+          color: var(--ink-2);
+          font-size: 17px;
+          line-height: 1.65;
+          margin: 0;
+          max-width: 60ch;
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        .craft-row.is-expanded .craft-body-text {
+          animation: craftFadeUp 600ms cubic-bezier(0.2, 0.8, 0.2, 1) 140ms forwards;
+        }
+
+        .craft-body-bullets {
+          list-style: none;
+          margin: 0; padding: 0;
+          display: flex; flex-direction: column;
+          gap: 12px;
+          font-family: var(--mono);
+          font-size: 12px;
+          letter-spacing: 0.04em;
+          color: var(--ink-3);
+        }
+        .craft-body-bullets li {
+          padding-left: 18px;
+          position: relative;
+          opacity: 0;
+          transform: translateY(6px);
+        }
+        .craft-body-bullets li::before {
+          content: '';
+          position: absolute;
+          left: 0; top: 8px;
+          width: 8px; height: 1px;
+          background: var(--amber);
+          transform: scaleX(0);
+          transform-origin: left;
+        }
+        .craft-row.is-expanded .craft-body-bullets li {
+          animation: craftFadeUp 520ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        .craft-row.is-expanded .craft-body-bullets li::before {
+          animation: craftDash 380ms cubic-bezier(0.7, 0, 0.2, 1) forwards;
+        }
+        .craft-row.is-expanded .craft-body-bullets li:nth-child(1) { animation-delay: 220ms; }
+        .craft-row.is-expanded .craft-body-bullets li:nth-child(2) { animation-delay: 290ms; }
+        .craft-row.is-expanded .craft-body-bullets li:nth-child(3) { animation-delay: 360ms; }
+        .craft-row.is-expanded .craft-body-bullets li:nth-child(4) { animation-delay: 430ms; }
+        .craft-row.is-expanded .craft-body-bullets li:nth-child(1)::before { animation-delay: 280ms; }
+        .craft-row.is-expanded .craft-body-bullets li:nth-child(2)::before { animation-delay: 350ms; }
+        .craft-row.is-expanded .craft-body-bullets li:nth-child(3)::before { animation-delay: 420ms; }
+        .craft-row.is-expanded .craft-body-bullets li:nth-child(4)::before { animation-delay: 490ms; }
+
+        /* Title pulse on expand — subtle italic emphasis lift */
+        .craft-row.is-expanded .craft-row-head .craft-title {
+          animation: craftTitlePulse 520ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        @keyframes craftFadeUp {
+          0%   { opacity: 0; transform: translateY(8px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes craftDash {
+          0%   { transform: scaleX(0); }
+          100% { transform: scaleX(1); }
+        }
+        @keyframes craftLine {
+          0%   { opacity: 0; transform: scaleY(0); }
+          15%  { opacity: 1; }
+          100% { opacity: 1; transform: scaleY(1); }
+        }
+        @keyframes craftTitlePulse {
+          0%   { letter-spacing: -0.035em; }
+          50%  { letter-spacing: -0.022em; }
+          100% { letter-spacing: -0.035em; }
+        }
+
         @media (hover: none) {
           .craft-row.is-active .craft-fill { transform: scaleX(1) !important; }
           .craft-row.is-active .craft-num,
           .craft-row.is-active .craft-title,
           .craft-row.is-active .craft-meta { color: var(--amber) !important; }
         }
+        @media (max-width: 900px) {
+          .craft-body-inner { grid-template-columns: 1fr !important; gap: 20px !important; padding-left: 50px !important; }
+        }
         @media (max-width: 720px) {
-          .craft-row { grid-template-columns: 50px 1fr !important; }
-          .craft-meta { display: none !important; }
+          .craft-row-head { grid-template-columns: 40px 1fr auto !important; gap: 16px !important; }
+          .craft-meta-text { display: none !important; }
           .craft-scene { display: none !important; }
+          .craft-body-inner { padding-left: 40px !important; padding-bottom: 28px !important; }
+          .craft-body-text { font-size: 15px !important; }
         }
       `}</style>
     </section>

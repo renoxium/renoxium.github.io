@@ -1,12 +1,14 @@
 import React, { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import Nav from './Nav.jsx';
+import EdgeNav from './EdgeNav.jsx';
 
-export const PAGES = ['home', 'craft', 'process', 'faq', 'contact'];
+export const PAGES = ['home', 'craft', 'process', 'edge', 'faq', 'contact'];
 
 export const PAGE_DIR = {
   home:    [ 0, -1.2 ],
   craft:   [-1.2,  0.9 ],
   process: [ 1.2,  0.9 ],
+  edge:    [ 0,  1.2 ],
   faq:     [-1.2, -0.9 ],
   contact: [ 1.2, -0.9 ],
 };
@@ -15,6 +17,7 @@ export const PAGE_LABEL = {
   home:    'Home',
   craft:   'Craft',
   process: 'Process',
+  edge:    'Edge',
   faq:     'FAQ',
   contact: 'Contact',
 };
@@ -263,6 +266,8 @@ export default function Stage({ pages }) {
         </div>
 
         <div ref={ballRef} style={stageStyles.ball} aria-hidden="true" />
+
+        <EdgeNav />
 
         <div style={stageStyles.cornerWord}>
           <span>Renoxium</span>
