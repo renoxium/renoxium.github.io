@@ -103,8 +103,8 @@ export default function HomePage() {
         </h1>
 
         <p className="reveal in" style={homeStyles.sub}>
-          Senior engineering, augmented by AI, headquartered in Dubai.
-          We turn briefs into prototypes in a week and v1 in a quarter.
+          A senior engineering studio headquartered in Dubai.
+          A seasoned team turning briefs into prototypes in a week and v1 in a quarter.
         </p>
 
         <div className="reveal in" style={homeStyles.hint}>

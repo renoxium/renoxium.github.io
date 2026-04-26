@@ -130,13 +130,13 @@ export default function Nav() {
         .brand-hover:hover .renox-ring { transform: rotate(180deg); }
         .brand-hover .renox-dot { transition: fill 220ms; }
         .nav-cta { position: relative; }
-        .nav-cta:hover { background: var(--amber); border-color: var(--amber); color: #0E0F0D; }
+        .nav-cta:hover { background: var(--amber); border-color: var(--amber); color: #14151B; }
         .nav-dot {
           width: 6px; height: 6px; border-radius: 999px; background: var(--amber);
           display: inline-block; transition: background 220ms;
           animation: pulse 2.4s ease-in-out infinite;
         }
-        .nav-cta:hover .nav-dot { background: #0E0F0D; }
+        .nav-cta:hover .nav-dot { background: #14151B; }
         .brand-hover { background: none; border: none; padding: 0; position: relative; }
         .brand-home-dot {
           position: absolute;

@@ -30,7 +30,10 @@ const stageStyles = {
     position: 'fixed',
     inset: 0,
     overflow: 'hidden',
-    background: 'var(--bg)',
+    background:
+      'radial-gradient(ellipse 90% 70% at 50% 0%, rgba(79, 179, 255, 0.06) 0%, transparent 55%),' +
+      'radial-gradient(ellipse 80% 60% at 100% 100%, rgba(79, 179, 255, 0.04) 0%, transparent 55%),' +
+      'var(--bg)',
   },
   pageHolder: {
     position: 'absolute',

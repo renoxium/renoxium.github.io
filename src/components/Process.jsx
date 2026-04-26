@@ -80,7 +80,7 @@ const processStyles = {
 const steps = [
   { n: '01', t: 'Discover',  body: 'A 30-minute scoping call. We map the problem, the users, the constraints. You leave with a one-page brief, yours to keep, no obligation.', dur: 'Day 0 · 1 hour' },
   { n: '02', t: 'Prototype', body: 'A clickable prototype in your hands inside a week. Real screens, real flows, no Lorem Ipsum. We iterate live until it feels right.',   dur: 'Week 1' },
-  { n: '03', t: 'Build',     body: 'Two-week sprints. Senior engineers paired with AI agents for the unsexy work. You see deploys daily; reviews weekly.',                  dur: 'Weeks 2 to 12' },
+  { n: '03', t: 'Build',     body: 'Two-week sprints. Senior engineers shipping daily to staging, with weekly reviews you actually attend. Modern tooling where it helps, never where it shouldn\'t.', dur: 'Weeks 2 to 12' },
   { n: '04', t: 'Scale',     body: 'We hand off, or stay on as your platform team. Either way: documentation, monitoring, and a runbook your future hires will thank you for.', dur: 'Month 4 →' },
 ];
 

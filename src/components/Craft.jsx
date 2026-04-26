@@ -91,50 +91,50 @@ const services = [
   {
     n: '01',
     title: 'SaaS platforms',
-    meta: 'B2B · multi-tenant',
+    meta: 'B2B · multi tenant',
     scene: 'saas',
-    body: 'A SaaS platform is software your customers log into and pay for monthly — think Notion, Stripe, or Slack. We build the whole thing: the login, the dashboard each tenant sees, the billing that charges their card on the right day, the admin console for your team. Your users get a working product; your finance team gets predictable recurring revenue.',
-    bullets: ['Login, roles, multi-tenant data isolation', 'Subscription billing + usage metering', 'Admin console for your team', 'Audit logs and compliance hooks'],
+    body: 'Subscription software your customers log into every day. We build the full stack: tenants, billing, admin, audit logs.',
+    bullets: ['Login, roles, multi tenant data isolation', 'Subscription billing + usage metering', 'Admin console for your team', 'Audit logs and compliance hooks'],
   },
   {
     n: '02',
     title: 'AI applications',
     meta: 'LLM · agents · RAG',
     scene: 'ai',
-    body: "Software that uses AI to do the work — answering questions about your documents, writing first drafts, automating decisions a human used to make manually. We pick the right model for the job (sometimes that's GPT, sometimes a smaller open one), connect it to your data, and wrap it in a UI your users actually understand. No magic — just thoughtful plumbing.",
-    bullets: ['Chat over your docs (RAG)', 'Agents that take real actions', 'Eval harness so you know it works', 'Cost & latency tuning'],
+    body: 'Software that puts AI to real work: chat over your documents, agents that take action, automation that holds up in production.',
+    bullets: ['Chat over your docs (RAG)', 'Agents that take real actions', 'Eval harness so you know it works', 'Cost and latency tuning'],
   },
   {
     n: '03',
     title: 'Web applications',
     meta: 'React · Next · TS',
     scene: 'web',
-    body: 'A website that does something — not just a brochure. Bookings, dashboards, configurators, internal tools, marketplaces. We build it fast in modern React, deploy it to a CDN so it loads instantly anywhere in the world, and wire up the backend pieces (database, auth, payments, email) so it actually works on Monday morning.',
-    bullets: ['Marketing sites with a CMS', 'Internal tools and dashboards', 'Marketplaces & two-sided platforms', 'High-traffic landing pages'],
+    body: 'Websites that do something, not brochures. Bookings, dashboards, marketplaces, internal tools that move the needle.',
+    bullets: ['Marketing sites with a CMS', 'Internal tools and dashboards', 'Marketplaces and two sided platforms', 'High traffic landing pages'],
   },
   {
     n: '04',
     title: 'Mobile apps',
     meta: 'iOS · Android · RN',
     scene: 'mobile',
-    body: 'Apps your users install from the App Store and Google Play. We build native (Swift/Kotlin) when the experience demands it — like camera-heavy or game-feel apps — and React Native when one team and one codebase makes more sense. We also handle the stuff people forget: store submissions, push notifications, crash reporting, OTA updates.',
-    bullets: ['iOS & Android in one codebase', 'Push notifications & deep links', 'Offline-first sync', 'Store submission + review handling'],
+    body: 'Apps your users install from the App Store and Play. Native when the experience demands it, React Native when one codebase fits.',
+    bullets: ['iOS and Android in one codebase', 'Push notifications and deep links', 'Offline first sync', 'Store submission and review handling'],
   },
   {
     n: '05',
     title: 'Rapid prototyping',
     meta: 'Idea to clickable in 7 days',
     scene: 'proto',
-    body: "You have an idea. We turn it into something you can click, demo to investors, hand to users for feedback — in seven days, fixed price. It is not a Figma file pretending to be a product; it is a real working app on a real URL. If we proceed to a v1, the prototype code rolls forward; if we don't, you keep what we built and the lessons.",
-    bullets: ['Day 1–2: scoping + flow design', 'Day 3–6: build', 'Day 7: live URL + screen-recorded walkthrough', 'Fixed price, no surprises'],
+    body: 'Idea to real working software in seven days. Real screens, real flows, real URL. Demo it Monday.',
+    bullets: ['Day 1 to 2: scoping and flow design', 'Day 3 to 6: build', 'Day 7: live URL with walkthrough', 'Fixed price, no surprises'],
   },
   {
     n: '06',
     title: 'A to Z delivery',
     meta: 'Discovery · build · scale',
     scene: 'az',
-    body: "Sometimes you don't want to manage three vendors. We can be your everything-team: research and discovery, brand and design, build and launch, monitoring and on-call. One contract, one PM, one Slack channel. We hand off cleanly when you're ready to bring it in-house — or stay on as your platform team for as long as that works.",
-    bullets: ['Discovery & user research', 'Brand, design, content', 'Engineering & QA', 'Hosting, monitoring, on-call'],
+    body: 'One vendor for the full lifecycle: discovery, design, build, launch, monitoring. One contract, one Slack channel.',
+    bullets: ['Discovery and user research', 'Brand, design, content', 'Engineering and QA', 'Hosting, monitoring, on call'],
   },
 ];
 
@@ -490,7 +490,7 @@ export default function Craft() {
         .craft-row.is-expanded .craft-body-bullets li:nth-child(3)::before { animation-delay: 420ms; }
         .craft-row.is-expanded .craft-body-bullets li:nth-child(4)::before { animation-delay: 490ms; }
 
-        /* Title pulse on expand — subtle italic emphasis lift */
+        /* Title pulse on expand: subtle italic emphasis lift */
         .craft-row.is-expanded .craft-row-head .craft-title {
           animation: craftTitlePulse 520ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
         }

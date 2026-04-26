@@ -54,7 +54,7 @@ export default function EdgeNav() {
     const onLeave = () => setZone(null);
 
     const onClick = (e) => {
-      // Re-check target every click — the mousemove ref can be stale,
+      // Re-check target every click : the mousemove ref can be stale,
       // and synthetic clicks (e.g. nav buttons) wouldn't update mousemove first.
       const t = e.target;
       if (t && t.closest && t.closest(INTERACTIVE)) return;
@@ -222,7 +222,7 @@ export default function EdgeNav() {
 }
 
 function ArrowGlyph({ dir }) {
-  // Stylized arrow — long shaft + chevron head, hairline weight to feel editorial.
+  // Stylized arrow : long shaft + chevron head, hairline weight to feel editorial.
   const flip = dir === 'left' ? 'scaleX(-1)' : 'none';
   return (
     <span className="edge-arrow-glyph" style={{ transform: flip }}>

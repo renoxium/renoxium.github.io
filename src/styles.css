@@ -1,13 +1,13 @@
 :root {
-  --bg: #0E0F0D;
-  --bg-2: #15140F;
-  --bg-3: #1C1B14;
+  --bg: #14151B;
+  --bg-2: #1C1D25;
+  --bg-3: #262833;
   --ink: #F4EFE6;
   --ink-2: #E8E1D2;
   --ink-3: rgba(244, 239, 230, 0.62);
   --ink-4: rgba(244, 239, 230, 0.38);
   --rule: rgba(244, 239, 230, 0.10);
-  --rule-strong: rgba(244, 239, 230, 0.20);
+  --rule-strong: rgba(244, 239, 230, 0.22);
   --amber: #4FB3FF;
   --amber-2: #1E7BD1;
   --amber-soft: rgba(79, 179, 255, 0.16);
@@ -21,7 +21,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 
-/* Vertical scrollbar — black + transparent track */
+/* Vertical scrollbar: black + transparent track */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.6) transparent;

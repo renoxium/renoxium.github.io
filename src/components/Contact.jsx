@@ -59,7 +59,7 @@ const contactStyles = {
     transition: 'all 200ms'
   }),
   submit: {
-    background: 'var(--amber)', color: '#0E0F0D',
+    background: 'var(--amber)', color: '#14151B',
     border: 'none', borderRadius: 999,
     padding: '16px 26px',
     fontSize: 14, fontWeight: 500,
@@ -89,12 +89,12 @@ function fmtDubaiFull() {
     return new Intl.DateTimeFormat('en-GB', {
       timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
     }).format(new Date()) + ' GST';
-  } catch (e) { return '—'; }
+  } catch (e) { return '...'; }
 }
 
 export default function Contact() {
   const [services, setServices] = useState(new Set(['SaaS']));
-  const [budget, setBudget] = useState('$50k–$150k');
+  const [budget, setBudget] = useState('$50k to $150k');
   const [submitted, setSubmitted] = useState(false);
   const [time, setTime] = useState(() => fmtDubaiFull());
 
@@ -153,7 +153,7 @@ export default function Contact() {
             <div style={contactStyles.field}>
               <label style={contactStyles.label}>Budget range</label>
               <div style={contactStyles.chips}>
-                {['<$25k', '$25k–$50k', '$50k–$150k', '$150k–$500k', '$500k+'].map((b) =>
+                {['<$25k', '$25k to $50k', '$50k to $150k', '$150k to $500k', '$500k+'].map((b) =>
                   <button key={b} type="button" style={contactStyles.chip(budget === b)} onClick={() => setBudget(b)}>
                     {b}
                   </button>

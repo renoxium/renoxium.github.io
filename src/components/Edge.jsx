@@ -194,39 +194,39 @@ const edgeStyles = {
 const pillars = [
   {
     n: '01',
-    titleStart: 'Seasoned engineers,',
-    titleAccent: 'AI partnered',
-    body: 'Every line is reviewed by an engineer with a decade-plus of production experience. AI agents take on the supporting work — scaffolding, migrations, documentation, test fixtures — so our seniors stay focused on architecture, judgment, and code quality. The result is a high-quality product, shipped at AI speed, without thinning out senior care.',
+    titleStart: 'A senior team,',
+    titleAccent: 'deeply seasoned',
+    body: 'Every line is reviewed by an engineer with a decade or more on production systems. We have seen the patterns, the pitfalls, the tradeoffs. That judgment is the foundation of everything we ship.',
     tag: 'Senior throughout.',
   },
   {
     n: '02',
-    titleStart: 'Ship-or-it',
-    titleAccent: "doesn't matter",
-    body: 'We commit to a date and stand by it. Daily deploys to staging, weekly demos to you. If a feature has to slip, we cut scope before we cut quality — and we tell you 48 hours ahead, not the day of.',
+    titleStart: 'Shipping is',
+    titleAccent: 'the practice',
+    body: 'We commit to a date and stand by it. Daily deploys to staging, weekly demos to you. If a feature has to slip, we cut scope before we cut quality, and we tell you 48 hours ahead, not the day of.',
     tag: 'Predictable timelines.',
   },
   {
     n: '03',
     titleStart: 'You own',
     titleAccent: 'every byte',
-    body: "Code, IP, repository, deploy keys, infrastructure — yours from commit one. We don't sell hosting, we don't lock you to a CMS, we don't own a shred of your stack. Hand-off is documented, runbooked, and non-negotiable.",
-    tag: 'Zero lock-in.',
+    body: "Code, IP, repository, deploy keys, infrastructure: yours from commit one. We don't sell hosting, we don't lock you to a CMS, we don't own a shred of your stack. Hand off is documented, runbooked, and non negotiable.",
+    tag: 'Zero lock in.',
   },
   {
     n: '04',
     titleStart: 'Crafted to',
     titleAccent: 'your shape',
-    body: "We don't run a factory. Each engagement is scoped, designed, and built around the specific business in front of us — your users, your constraints, your team's strengths. The work bends to your reality, not to a template we reuse on the next client.",
+    body: "We don't run a factory. Each engagement is scoped, designed, and built around the specific business in front of us: your users, your constraints, your team's strengths. The work bends to your reality, not to a template we reuse on the next client.",
     tag: 'Bespoke by default.',
   },
 ];
 
 const compareRows = [
   { dim: 'Engineering team',  us: 'Only senior engineers (10+ yrs)',          them: 'Senior lead, mid + junior delivery' },
-  { dim: 'Time to prototype', us: '7 days, working software',                 them: '4–8 weeks of discovery' },
+  { dim: 'Time to prototype', us: '7 days, working software',                 them: '4 to 8 weeks of discovery' },
   { dim: 'Code & IP',         us: 'Yours from day 1, full repo access',       them: 'Handed over at end, sometimes' },
-  { dim: 'AI usage',          us: 'Inside our pipeline, on the supporting work', them: 'Marketing slide; or none' },
+  { dim: 'Review culture',    us: 'Senior review on every commit',           them: 'Lead review at milestones, if at all' },
   { dim: 'Hand-off',          us: 'Runbooks, monitoring, 30-day support',     them: 'Slack channel that goes quiet' },
   { dim: 'Engagement model',  us: 'Bespoke scope, shaped to your business',   them: 'Fixed playbook, applied to every client' },
 ];
@@ -254,7 +254,7 @@ export default function Edge() {
             </h2>
           </div>
           <p style={edgeStyles.blurb}>
-            A boutique technology studio. We craft each engagement to fit — seasoned engineers paired with AI, delivering work that carries the senior judgment AI alone can't replicate, at the speed traditional agencies can't match.
+            A boutique technology studio. A seasoned senior engineering team that crafts each engagement to fit, delivering work shaped by the kind of judgment only years of production experience can produce.
           </p>
         </div>
 
@@ -302,10 +302,10 @@ export default function Edge() {
 
         <div style={edgeStyles.closing} className="edge-closing reveal in">
           <p style={edgeStyles.closingQuote}>
-            "Deliberately small. Deliberately senior. AI as a partner, not a substitute — and that is what makes the work hold."
+            "Deliberately small. Deliberately senior. Carefully crafted. That is what makes the work hold."
           </p>
           <div style={edgeStyles.closingMeta}>
-            That is the edge. A boutique team of seasoned engineers, AI-augmented, shipping software the way it ought to be shipped — with deliberate craft, a clear timeline, and a runbook your team can actually run. If that lines up with what you need, we should talk.
+            That is the edge. A boutique team of seasoned engineers shipping software the way it ought to be shipped: with deliberate craft, a clear timeline, and a runbook your team can actually run. If that lines up with what you need, we should talk.
           </div>
         </div>
       </div>
