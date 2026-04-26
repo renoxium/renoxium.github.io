@@ -60,6 +60,24 @@ const stageStyles = {
     zIndex: 60,
     pointerEvents: 'none',
     userSelect: 'none',
+    display: 'flex',
+    alignItems: 'baseline',
+    gap: 10,
+  },
+  cornerCredit: {
+    color: 'var(--ink-4)',
+    letterSpacing: '0.08em',
+    textTransform: 'none',
+    fontStyle: 'italic',
+  },
+  cornerCreditName: {
+    color: 'var(--amber)',
+    fontFamily: 'var(--serif)',
+    fontStyle: 'italic',
+    fontSize: 13,
+    letterSpacing: '-0.01em',
+    fontVariationSettings: '"opsz" 144, "SOFT" 100, "wght" 360',
+    textTransform: 'none',
   },
 };
 
@@ -246,7 +264,12 @@ export default function Stage({ pages }) {
 
         <div ref={ballRef} style={stageStyles.ball} aria-hidden="true" />
 
-        <div style={stageStyles.cornerWord}>Renoxium</div>
+        <div style={stageStyles.cornerWord}>
+          <span>Renoxium</span>
+          <span style={stageStyles.cornerCredit}>
+            idea by <span style={stageStyles.cornerCreditName}>Raoul</span>
+          </span>
+        </div>
         <Nav />
       </div>
     </StageContext.Provider>
