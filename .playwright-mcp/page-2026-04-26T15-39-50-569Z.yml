@@ -1,0 +1,47 @@
+- generic [ref=e2]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e9]: Dubai · 19:39 GST
+        - generic [ref=e10]: ·
+        - generic [ref=e11]: EST. NOW
+      - heading "A s t u d i o t h a t s h i p s ." [level=1] [ref=e12]:
+        - generic [ref=e14]:
+          - generic [ref=e16]: A
+          - generic [ref=e20]: s
+          - generic [ref=e22]: t
+          - generic [ref=e24]: u
+          - generic [ref=e26]: d
+          - generic [ref=e28]: i
+          - generic [ref=e30]: o
+          - generic [ref=e34]: t
+          - generic [ref=e36]: h
+          - generic [ref=e38]: a
+          - generic [ref=e40]: t
+        - generic [ref=e44]:
+          - generic [ref=e46]: s
+          - generic [ref=e48]: h
+          - generic [ref=e50]: i
+          - generic [ref=e52]: p
+          - generic [ref=e54]: s
+        - generic [ref=e58]: .
+      - paragraph [ref=e59]: A senior engineering studio headquartered in Dubai. A seasoned team turning briefs into prototypes in a week and v1 in a quarter.
+      - generic [ref=e60]:
+        - generic [ref=e61]: ↗
+        - generic [ref=e62]: Use the nav above. Or ← →
+    - generic: R
+  - generic:
+    - generic: Renoxium
+    - generic: idea by Raoul
+  - navigation:
+    - generic [ref=e63]:
+      - button "You are on the home page" [ref=e64]:
+        - img [ref=e66]
+        - generic [ref=e69]: Renoxium
+      - generic [ref=e71]:
+        - button "Craft" [ref=e72]
+        - button "Process" [ref=e73]
+        - button "Edge" [ref=e74]
+        - button "FAQ" [ref=e75]
+        - button "Contact" [ref=e76]
+      - button [ref=e77]

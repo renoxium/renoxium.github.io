@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow internal artifacts that should not be indexed
+Disallow: /assets/
+
+Sitemap: https://renoxium.com/sitemap.xml

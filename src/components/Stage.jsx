@@ -1,6 +1,7 @@
 import React, { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import Nav from './Nav.jsx';
 import EdgeNav from './EdgeNav.jsx';
+import MobileScrollNav from './MobileScrollNav.jsx';
 
 export const PAGES = ['home', 'craft', 'process', 'edge', 'faq', 'contact'];
 
@@ -271,6 +272,7 @@ export default function Stage({ pages }) {
         <div ref={ballRef} style={stageStyles.ball} aria-hidden="true" />
 
         <EdgeNav />
+        <MobileScrollNav />
 
         <div style={stageStyles.cornerWord}>
           <span>Renoxium</span>

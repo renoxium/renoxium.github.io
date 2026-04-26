@@ -7,6 +7,11 @@ const navStyles = {
     position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
     padding: '20px 0',
     pointerEvents: 'none',
+    background: 'rgba(20, 21, 27, 0.45)',
+    backdropFilter: 'blur(14px) saturate(140%)',
+    WebkitBackdropFilter: 'blur(14px) saturate(140%)',
+    borderBottom: '1px solid rgba(244, 239, 230, 0.05)',
+    transition: 'opacity 360ms ease',
   },
   inner: {
     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -20,9 +25,11 @@ const navStyles = {
   word: {
     fontFamily: 'var(--serif)', fontSize: 26,
     letterSpacing: '-0.03em',
-    lineHeight: 1, paddingTop: 2,
+    lineHeight: 1,
+    display: 'block',
     fontVariationSettings: '"opsz" 144, "SOFT" 30',
     fontWeight: 380,
+    transform: 'translateY(-1px)',
   },
   links: {
     display: 'flex', alignItems: 'center', gap: 28,
@@ -74,7 +81,7 @@ export default function Nav() {
   const isHome = stage.currentPage === 'home';
 
   return (
-    <nav style={navStyles.bar}>
+    <nav style={{ ...navStyles.bar, opacity: transitioning ? 0 : 1 }}>
       <div className="wrap" style={navStyles.inner}>
         <button
           onClick={handleNav('home')}

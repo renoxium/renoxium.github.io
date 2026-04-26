@@ -137,12 +137,10 @@ export default function EdgeNav() {
         }
         .edge-strip-left {
           left: 0;
-          border-right: 1px dashed rgba(244, 239, 230, 0.06);
           background: linear-gradient(to right, rgba(79, 179, 255, 0.04), rgba(79, 179, 255, 0));
         }
         .edge-strip-right {
           right: 0;
-          border-left: 1px dashed rgba(244, 239, 230, 0.06);
           background: linear-gradient(to left, rgba(79, 179, 255, 0.04), rgba(79, 179, 255, 0));
         }
         .edge-strip.is-active {
@@ -150,11 +148,9 @@ export default function EdgeNav() {
         }
         .edge-strip-left.is-active {
           background: linear-gradient(to right, rgba(79, 179, 255, 0.14), rgba(79, 179, 255, 0));
-          border-right-color: rgba(79, 179, 255, 0.35);
         }
         .edge-strip-right.is-active {
           background: linear-gradient(to left, rgba(79, 179, 255, 0.14), rgba(79, 179, 255, 0));
-          border-left-color: rgba(79, 179, 255, 0.35);
         }
 
         body.edge-active #cursor,
