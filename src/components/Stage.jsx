@@ -70,6 +70,7 @@ const stageStyles = {
     display: 'flex',
     alignItems: 'baseline',
     gap: 10,
+    transition: 'opacity 420ms ease, transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1)',
   },
   cornerCredit: {
     color: 'var(--ink-4)',
@@ -274,10 +275,19 @@ export default function Stage({ pages }) {
         <EdgeNav />
         <MobileScrollNav />
 
-        <div style={stageStyles.cornerWord}>
+        <div
+          style={{
+            ...stageStyles.cornerWord,
+            opacity: (currentPage === 'home' && phase === 'idle') ? 1 : 0,
+            transform: (currentPage === 'home' && phase === 'idle')
+              ? 'translateY(0)'
+              : 'translateY(8px)',
+          }}
+          aria-hidden={!(currentPage === 'home' && phase === 'idle')}
+        >
           <span>Renoxium</span>
           <span style={stageStyles.cornerCredit}>
-            idea by <span style={stageStyles.cornerCreditName}>Raoul</span>
+            design idea by <span style={stageStyles.cornerCreditName}>Raoul</span>
           </span>
         </div>
         <Nav />
