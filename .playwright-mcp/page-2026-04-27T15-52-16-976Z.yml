@@ -1,0 +1,101 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Renoxium admin" [ref=e5] [cursor=pointer]:
+      - /url: /admin
+      - text: Renoxium
+      - generic [ref=e6]: admin
+    - navigation [ref=e7]:
+      - link "Inquiries" [ref=e8] [cursor=pointer]:
+        - /url: /admin/inquiries
+      - link "Content" [ref=e9] [cursor=pointer]:
+        - /url: /admin/content
+      - link "Analytics" [ref=e10] [cursor=pointer]:
+        - /url: /admin/analytics
+  - main [ref=e11]:
+    - heading "Analytics" [level=1] [ref=e12]
+    - paragraph [ref=e13]: First-party page-view counts. Admin paths are not tracked.
+    - heading "Daily views · last 30 days" [level=2] [ref=e14]
+    - generic [ref=e15]:
+      - img [ref=e16]:
+        - generic:
+          - 'generic "2026-03-29: 0"'
+        - generic:
+          - 'generic "2026-03-30: 0"'
+        - generic:
+          - 'generic "2026-03-31: 0"'
+        - generic:
+          - 'generic "2026-04-01: 0"'
+        - generic:
+          - 'generic "2026-04-02: 0"'
+        - generic:
+          - 'generic "2026-04-03: 0"'
+        - generic:
+          - 'generic "2026-04-04: 0"'
+        - generic:
+          - 'generic "2026-04-05: 0"'
+        - generic:
+          - 'generic "2026-04-06: 0"'
+        - generic:
+          - 'generic "2026-04-07: 0"'
+        - generic:
+          - 'generic "2026-04-08: 0"'
+        - generic:
+          - 'generic "2026-04-09: 0"'
+        - generic:
+          - 'generic "2026-04-10: 0"'
+        - generic:
+          - 'generic "2026-04-11: 0"'
+        - generic:
+          - 'generic "2026-04-12: 0"'
+        - generic:
+          - 'generic "2026-04-13: 0"'
+        - generic:
+          - 'generic "2026-04-14: 0"'
+        - generic:
+          - 'generic "2026-04-15: 0"'
+        - generic:
+          - 'generic "2026-04-16: 0"'
+        - generic:
+          - 'generic "2026-04-17: 0"'
+        - generic:
+          - 'generic "2026-04-18: 0"'
+        - generic:
+          - 'generic "2026-04-19: 0"'
+        - generic:
+          - 'generic "2026-04-20: 0"'
+        - generic:
+          - 'generic "2026-04-21: 0"'
+        - generic:
+          - 'generic "2026-04-22: 0"'
+        - generic:
+          - 'generic "2026-04-23: 0"'
+        - generic:
+          - 'generic "2026-04-24: 0"'
+        - generic:
+          - 'generic "2026-04-25: 0"'
+        - generic:
+          - 'generic "2026-04-26: 0"'
+        - 'generic "2026-04-27: 3" [ref=e18]'
+      - generic [ref=e19]:
+        - generic [ref=e20]: 2026-03-29
+        - generic [ref=e21]: peak 3/day
+        - generic [ref=e22]: 2026-04-27
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - heading "Top paths · last 7 days" [level=3] [ref=e25]
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e30]: /contact
+            - generic [ref=e31]: "2"
+          - generic [ref=e32]:
+            - generic [ref=e35]: /edge
+            - generic [ref=e36]: "1"
+      - generic [ref=e37]:
+        - heading "Top paths · last 30 days" [level=3] [ref=e38]
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e43]: /contact
+            - generic [ref=e44]: "2"
+          - generic [ref=e45]:
+            - generic [ref=e48]: /edge
+            - generic [ref=e49]: "1"

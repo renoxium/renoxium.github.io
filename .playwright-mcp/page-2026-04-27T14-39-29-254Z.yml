@@ -1,0 +1,54 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e8]: Dubai · 18:39 GST
+        - generic [ref=e9]: ·
+        - generic [ref=e10]: EST. NOW
+      - heading "A s t u d i o t h a t s h i p s ." [level=1] [ref=e11]:
+        - generic [ref=e13]:
+          - generic [ref=e15]: A
+          - generic [ref=e19]: s
+          - generic [ref=e21]: t
+          - generic [ref=e23]: u
+          - generic [ref=e25]: d
+          - generic [ref=e27]: i
+          - generic [ref=e29]: o
+          - generic [ref=e33]: t
+          - generic [ref=e35]: h
+          - generic [ref=e37]: a
+          - generic [ref=e39]: t
+        - generic [ref=e43]:
+          - generic [ref=e45]: s
+          - generic [ref=e47]: h
+          - generic [ref=e49]: i
+          - generic [ref=e51]: p
+          - generic [ref=e53]: s
+        - generic [ref=e57]: .
+      - paragraph [ref=e58]: A senior engineering studio headquartered in Dubai. A seasoned team turning briefs into prototypes in a week and v1 in a quarter.
+      - generic [ref=e59]:
+        - generic [ref=e60]: ↗
+        - generic [ref=e61]: Use the nav above. Or ← →
+    - generic: R
+  - generic:
+    - generic: Renoxium
+    - generic: design idea by Raoul
+  - navigation:
+    - generic [ref=e62]:
+      - link "You are on the home page" [ref=e63]:
+        - /url: /
+        - img "Renoxium" [ref=e65]
+        - generic [ref=e66]: Renoxium
+      - generic [ref=e68]:
+        - link "Craft" [ref=e69]:
+          - /url: /craft
+        - link "Process" [ref=e70]:
+          - /url: /process
+        - link "Edge" [ref=e71]:
+          - /url: /edge
+        - link "FAQ" [ref=e72]:
+          - /url: /faq
+        - link "Contact" [ref=e73]:
+          - /url: /contact
+      - link [ref=e74]:
+        - /url: /contact

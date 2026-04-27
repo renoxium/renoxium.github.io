@@ -1,0 +1,102 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - generic: E
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: What sets us apart
+          - heading "Our edge, spelled out." [level=2] [ref=e9]:
+            - text: Our edge,
+            - text: spelled out.
+        - paragraph [ref=e10]: A boutique technology studio. A seasoned senior engineering team that crafts each engagement to fit, delivering work shaped by the kind of judgment only years of production experience can produce.
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]: "01"
+          - heading "A senior team, deeply seasoned" [level=3] [ref=e14]
+          - paragraph [ref=e15]: Every line is reviewed by an engineer with a decade or more on production systems. We have seen the patterns, the pitfalls, the tradeoffs. That judgment is the foundation of everything we ship.
+          - generic [ref=e16]: Senior throughout.
+        - generic [ref=e18]:
+          - generic [ref=e19]: "02"
+          - heading "Shipping is the practice" [level=3] [ref=e20]
+          - paragraph [ref=e21]: We commit to a date and stand by it. Daily deploys to staging, weekly demos to you. If a feature has to slip, we cut scope before we cut quality, and we tell you 48 hours ahead, not the day of.
+          - generic [ref=e22]: Predictable timelines.
+        - generic [ref=e24]:
+          - generic [ref=e25]: "03"
+          - heading "You own every byte" [level=3] [ref=e26]
+          - paragraph [ref=e27]: "Code, IP, repository, deploy keys, infrastructure: yours from commit one. We don't sell hosting, we don't lock you to a CMS, we don't own a shred of your stack. Hand off is documented, runbooked, and non negotiable."
+          - generic [ref=e28]: Zero lock in.
+        - generic [ref=e30]:
+          - generic [ref=e31]: "04"
+          - heading "Crafted to your shape" [level=3] [ref=e32]
+          - paragraph [ref=e33]: "We don't run a factory. Each engagement is scoped, designed, and built around the specific business in front of us: your users, your constraints, your team's strengths. The work bends to your reality, not to a template we reuse on the next client."
+          - generic [ref=e34]: Bespoke by default.
+      - generic [ref=e36]:
+        - generic [ref=e37]: Us vs. the usual
+        - heading "Read the delta." [level=3] [ref=e38]
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]: Dimension
+            - generic [ref=e42]: Renoxium
+            - generic [ref=e43]: Typical agency
+          - generic [ref=e44]:
+            - generic [ref=e45]: Engineering team
+            - generic [ref=e46]:
+              - img [ref=e48]
+              - generic [ref=e50]: Only senior engineers (10+ yrs)
+            - generic [ref=e51]: Senior lead, mid + junior delivery
+          - generic [ref=e52]:
+            - generic [ref=e53]: Time to prototype
+            - generic [ref=e54]:
+              - img [ref=e56]
+              - generic [ref=e58]: 7 days, working software
+            - generic [ref=e59]: 4 to 8 weeks of discovery
+          - generic [ref=e60]:
+            - generic [ref=e61]: Code & IP
+            - generic [ref=e62]:
+              - img [ref=e64]
+              - generic [ref=e66]: Yours from day 1, full repo access
+            - generic [ref=e67]: Handed over at end, sometimes
+          - generic [ref=e68]:
+            - generic [ref=e69]: Review culture
+            - generic [ref=e70]:
+              - img [ref=e72]
+              - generic [ref=e74]: Senior review on every commit
+            - generic [ref=e75]: Lead review at milestones, if at all
+          - generic [ref=e76]:
+            - generic [ref=e77]: Hand-off
+            - generic [ref=e78]:
+              - img [ref=e80]
+              - generic [ref=e82]: Runbooks, monitoring, 30-day support
+            - generic [ref=e83]: Slack channel that goes quiet
+          - generic [ref=e84]:
+            - generic [ref=e85]: Engagement model
+            - generic [ref=e86]:
+              - img [ref=e88]
+              - generic [ref=e90]: Bespoke scope, shaped to your business
+            - generic [ref=e91]: Fixed playbook, applied to every client
+      - generic [ref=e92]:
+        - paragraph [ref=e93]: "\"Deliberately small. Deliberately senior. Carefully crafted. That is what makes the work hold.\""
+        - generic [ref=e94]: "That is the edge. A boutique team of seasoned engineers shipping software the way it ought to be shipped: with deliberate craft, a clear timeline, and a runbook your team can actually run. If that lines up with what you need, we should talk."
+  - generic:
+    - generic: Renoxium
+    - generic: design idea by Raoul
+  - navigation:
+    - generic [ref=e95]:
+      - link "Back to home" [ref=e96]:
+        - /url: /
+        - img "Renoxium" [ref=e98]
+        - generic [ref=e99]: Renoxium
+      - generic [ref=e101]:
+        - link "Craft" [ref=e102]:
+          - /url: /craft
+        - link "Process" [ref=e103]:
+          - /url: /process
+        - link "Edge":
+          - /url: /edge
+        - link "FAQ" [ref=e104]:
+          - /url: /faq
+        - link "Contact" [ref=e105]:
+          - /url: /contact
+      - link "Start a project" [ref=e106]:
+        - /url: /contact
+        - generic [ref=e108]: Start a project

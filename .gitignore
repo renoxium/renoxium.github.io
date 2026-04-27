@@ -5,3 +5,25 @@ dist
 .vite
 .env
 .env.local
+.env.*.local
+
+# Next.js
+.next/
+out/
+.next.cache/
+next-env.d.ts.bak
+
+# SQLite — DB file is environment-specific, never committed
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Drizzle generated artifacts that aren't checked in
+drizzle/.snapshot.json
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db

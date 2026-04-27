@@ -1,0 +1,38 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Renoxium admin" [ref=e5] [cursor=pointer]:
+      - /url: /admin
+      - text: Renoxium
+      - generic [ref=e6]: admin
+    - navigation [ref=e7]:
+      - link "Inquiries" [ref=e8] [cursor=pointer]:
+        - /url: /admin/inquiries
+      - link "Content" [ref=e9] [cursor=pointer]:
+        - /url: /admin/content
+      - link "Analytics" [ref=e10] [cursor=pointer]:
+        - /url: /admin/analytics
+  - main [ref=e11]:
+    - heading "Overview" [level=1] [ref=e12]
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]: Inquiries · all time
+        - generic [ref=e16]: "2"
+      - generic [ref=e17]:
+        - generic [ref=e18]: New (unread)
+        - generic [ref=e19]: "2"
+      - generic [ref=e20]:
+        - generic [ref=e21]: Inquiries · last 7d
+        - generic [ref=e22]: "2"
+      - generic [ref=e23]:
+        - generic [ref=e24]: Page views · last 24h
+        - generic [ref=e25]: "3"
+      - generic [ref=e26]:
+        - generic [ref=e27]: Page views · last 7d
+        - generic [ref=e28]: "3"
+    - generic [ref=e29]:
+      - link "View inquiries →" [ref=e30] [cursor=pointer]:
+        - /url: /admin/inquiries
+      - link "Edit content" [ref=e31] [cursor=pointer]:
+        - /url: /admin/content
+      - link "Analytics" [ref=e32] [cursor=pointer]:
+        - /url: /admin/analytics

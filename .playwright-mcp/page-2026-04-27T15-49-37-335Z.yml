@@ -1,0 +1,74 @@
+- generic [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: Contact
+      - heading "Let's build something good." [level=2] [ref=e8]:
+        - text: Let's build
+        - text: something good.
+      - paragraph [ref=e9]: Tell us a little about the project. We reply within 2 business days (tops) during Dubai business days. Usually with a calendar link and a question or two.
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - generic [ref=e14]: Your name
+            - textbox "Layla Hassan" [ref=e15]
+          - generic [ref=e16]:
+            - generic [ref=e17]: Work email
+            - textbox "layla@company.com" [ref=e18]
+        - generic [ref=e19]:
+          - generic [ref=e20]: What do you need?
+          - generic [ref=e21]:
+            - button "SaaS" [ref=e22] [cursor=pointer]
+            - button "Web app" [ref=e23] [cursor=pointer]
+            - button "Mobile app" [ref=e24] [cursor=pointer]
+            - button "AI product" [ref=e25] [cursor=pointer]
+            - button "Prototype" [ref=e26] [cursor=pointer]
+            - button "Audit / takeover" [ref=e27] [cursor=pointer]
+        - generic [ref=e28]:
+          - generic [ref=e29]: Budget range
+          - generic [ref=e30]:
+            - button "<$25k" [ref=e31] [cursor=pointer]
+            - button "$25k to $50k" [ref=e32] [cursor=pointer]
+            - button "$50k to $150k" [ref=e33] [cursor=pointer]
+            - button "$150k to $500k" [ref=e34] [cursor=pointer]
+            - button "$500k+" [ref=e35] [cursor=pointer]
+        - generic [ref=e36]:
+          - generic [ref=e37]: Tell us about it
+          - textbox "A few sentences is plenty. We'll ask the rest on the call." [ref=e38]
+        - button "Send brief" [ref=e39] [cursor=pointer]:
+          - text: Send brief
+          - img [ref=e40]
+      - complementary [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: Studio
+          - generic [ref=e45]: UAE, Dubai
+        - generic [ref=e46]:
+          - generic [ref=e47]: Local time
+          - generic [ref=e48]: 19:49:36 GST
+        - generic [ref=e49]:
+          - generic [ref=e50]: Email
+          - link "Raviouliti@renoxium.com" [ref=e51] [cursor=pointer]:
+            - /url: mailto:hello@renoxium.com
+  - generic:
+    - generic: Renoxium
+    - generic: design idea by Raoul
+  - navigation:
+    - generic [ref=e52]:
+      - link "Back to home" [ref=e53]:
+        - /url: /
+        - img "Renoxium" [ref=e55]
+        - generic [ref=e56]: Renoxium
+      - generic [ref=e58]:
+        - link "Craft" [ref=e59]:
+          - /url: /craft
+        - link "Process" [ref=e60]:
+          - /url: /process
+        - link "Edge" [ref=e61]:
+          - /url: /edge
+        - link "FAQ" [ref=e62]:
+          - /url: /faq
+        - link "Contact":
+          - /url: /contact
+      - link "Start a project":
+        - /url: /contact
+        - generic: Start a project

@@ -1,0 +1,69 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Renoxium admin" [ref=e5] [cursor=pointer]:
+      - /url: /admin
+      - text: Renoxium
+      - generic [ref=e6]: admin
+    - navigation [ref=e7]:
+      - link "Inquiries" [ref=e8] [cursor=pointer]:
+        - /url: /admin/inquiries
+      - link "Content" [ref=e9] [cursor=pointer]:
+        - /url: /admin/content
+      - link "Analytics" [ref=e10] [cursor=pointer]:
+        - /url: /admin/analytics
+  - main [ref=e11]:
+    - heading "Inquiries" [level=1] [ref=e12]
+    - group [ref=e13]:
+      - generic "new Pelican Studios pelican@example.com $50k to $150k 2026-04-27 15:50" [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]: new
+        - generic [ref=e16]: Pelican Studios
+        - generic [ref=e17]: pelican@example.com
+        - generic [ref=e18]: $50k to $150k
+        - generic [ref=e19]: 2026-04-27 15:50
+      - generic [ref=e20]:
+        - generic [ref=e22]: SaaS
+        - generic [ref=e23]: Want a clickable prototype for an internal tool. Aiming Q3 launch.
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - generic [ref=e26]:
+              - generic [ref=e27]: Status
+              - combobox "Status" [ref=e28]:
+                - option "new" [selected]
+                - option "contacted"
+                - option "qualified"
+                - option "won"
+                - option "lost"
+            - generic [ref=e29]:
+              - generic [ref=e30]: Notes
+              - textbox "Notes" [ref=e31]:
+                - /placeholder: Internal notes…
+          - button "Save" [ref=e33] [cursor=pointer]
+        - button "Delete" [ref=e35] [cursor=pointer]
+    - group [ref=e36]:
+      - generic "new Layla Hassan layla@example.com $50k to $150k 2026-04-27 15:48" [ref=e37] [cursor=pointer]:
+        - generic [ref=e38]: new
+        - generic [ref=e39]: Layla Hassan
+        - generic [ref=e40]: layla@example.com
+        - generic [ref=e41]: $50k to $150k
+        - generic [ref=e42]: 2026-04-27 15:48
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: SaaS
+          - generic [ref=e46]: Prototype
+        - generic [ref=e47]: Need a SaaS prototype next month.
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - generic [ref=e51]: Status
+              - combobox "Status" [ref=e52]:
+                - option "new" [selected]
+                - option "contacted"
+                - option "qualified"
+                - option "won"
+                - option "lost"
+            - generic [ref=e53]:
+              - generic [ref=e54]: Notes
+              - textbox "Notes" [ref=e55]:
+                - /placeholder: Internal notes…
+          - button "Save" [ref=e57] [cursor=pointer]
+        - button "Delete" [ref=e59] [cursor=pointer]
